@@ -33,8 +33,8 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="text-xl text-muted-foreground text-center max-w-2xl font-mono"
         >
-          We build innovative AI and neurotech tools to unlock the future of
-          human potential.
+          Human-centered AI and neurotech to amplify awareness, focus, and
+          creativity.
         </motion.p>
       </motion.section>
 
@@ -64,14 +64,14 @@ export default function Home() {
             className="space-y-4"
           >
             <p className="text-muted-foreground">
-              At Nebriq Labs, we focus on creating innovative AI and neurotech
-              tools that empower individuals and organizations. Our solutions
-              aim to bridge the gap between technology and human potential.
+              At Nebriq Labs, we build AI and neurotech tools that support how
+              people think, focus, and create. Our goal is to make technology
+              feel more natural—closer to how we actually live, learn, and feel.
             </p>
             <p className="text-muted-foreground">
-              We believe in open collaboration and continuous exploration. By
-              blending research with real-world applications, we strive to shape
-              a future where advanced technologies enhance everyday life.
+              We believe in open exploration and thoughtful design. By blending
+              research with real-world tools, we aim to create technologies that
+              quietly empower people in their daily lives.
             </p>
           </motion.div>
 
