@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Project } from "@/types";
 
 export const ProjectCard = ({
@@ -20,12 +14,6 @@ export const ProjectCard = ({
         <CardTitle className="font-mono text-lg font-semibold">
           Project_{name}
         </CardTitle>
-        <CardDescription className="text-xs text-muted-foreground font-mono">
-          0x
-          {Math.floor(Math.random() * 10000)
-            .toString(16)
-            .padStart(4, "0")}
-        </CardDescription>
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground mb-4">{description}</p>
