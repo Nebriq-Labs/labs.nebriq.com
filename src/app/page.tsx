@@ -86,7 +86,7 @@ export default function Home() {
             business?
           </p>
           <Link
-            href="mailto:info@nebriq.com"
+            href="mailto:hi@nebriq.com"
             className={buttonVariants({ variant: "outline" })}
           >
             <span className="font-mono">INITIATE_CONTACT</span>
