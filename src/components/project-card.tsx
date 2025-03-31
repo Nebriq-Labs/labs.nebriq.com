@@ -31,7 +31,7 @@ export const ProjectCard = ({
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="text-xs px-2  bg-muted text-muted-foreground rounded-sm"
+              className="text-xs px-2 bg-muted text-muted-foreground rounded-sm"
             >
               {tech}
             </span>
