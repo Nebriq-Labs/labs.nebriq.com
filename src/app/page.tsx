@@ -1,103 +1,115 @@
-import Image from "next/image";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import { ProjectCard } from "../components/project-card";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="container mx-auto px-4 py-16 max-w-4xl space-y-24">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center space-y-6 pt-12">
+        <div className="inline-block relative mb-4">
+          <div className="absolute inset-0 bg-primary/20 blur-xl"></div>
+          <h1 className="text-6xl font-bold relative z-10">NEBRIQ LABS</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <p className="text-xl text-muted-foreground text-center max-w-2xl font-mono">
+          We build innovative AI and neurotech tools to unlock the future of
+          human potential.
+        </p>
+      </section>
+
+      {/* About Section */}
+      <section className="space-y-8">
+        <h2 className="text-2xl font-mono font-bold border-l-4 border-primary pl-4">
+          00 :: ABOUT
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              At Nebriq Labs, we focus on creating innovative AI and neurotech
+              tools that empower individuals and organizations. Our solutions
+              aim to bridge the gap between technology and human potential.
+            </p>
+            <p className="text-muted-foreground">
+              We believe in open collaboration and continuous exploration. By
+              blending research with real-world applications, we strive to shape
+              a future where advanced technologies enhance everyday life.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="border border-border p-4 rounded-sm bg-card/50">
+              <h3 className="font-mono mb-2 text-primary">OUR APPROACH</h3>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-primary">→</span> We prioritize your
+                  data protection at every step.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-primary">→</span>
+                  Clean, intuitive design for seamless interaction.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-primary">→</span>
+                  Pushing the boundaries of AI and neurotech.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-primary">→</span> Flexible systems that
+                  grow with your needs.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="space-y-8">
+        <h2 className="text-2xl font-mono font-bold border-l-4 border-primary pl-4">
+          01 :: STUFF WE BUILT
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.name} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="space-y-8">
+        <h2 className="text-2xl font-mono font-bold border-l-4 border-primary pl-4">
+          02 :: CONNECT
+        </h2>
+        <div className="border border-border rounded-sm p-6 bg-card/50">
+          <p className="text-muted-foreground mb-6">
+            Interested in working with us? Need a custom solution for your
+            business?
+          </p>
+          <Link
+            href="mailto:info@nebriq.com"
+            className={buttonVariants({ variant: "outline" })}
+          >
+            <span className="font-mono">INITIATE_CONTACT</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="pt-12 pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-center border-t border-border pt-8">
+          <div className="font-mono text-sm text-muted-foreground">
+            NEBRIQ LABS © {new Date().getFullYear()}
+          </div>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <Link
+              href="https://github.com/nebriq-labs"
+              className="text-muted-foreground hover:text-primary"
+            >
+              github
+            </Link>
+          </div>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
